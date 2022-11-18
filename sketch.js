@@ -1,5 +1,5 @@
-PImage nail[];
-int frame = 0;
+let PImage = nail[];
+let frame = 0;
 
 void setup(){
   nail = new PImage[44];
