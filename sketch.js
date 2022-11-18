@@ -1,7 +1,7 @@
-void setup(){
-  print('test page');
+function setup() {
+    createCanvas(windowWidth, windowHeight);
 }
-
-void draw(){
-  
+ 
+function draw() {
+    ellipse(100, 100, 80, 50);
 }
