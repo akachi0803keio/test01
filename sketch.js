@@ -4,7 +4,7 @@ int frame = 0;
 void setup(){
   nail = new PImage[44];
   size(640,480);
-  
+  print('test page');
   for(int i =0; i<44; i++)
     nail[i] =loadImage("11-image_"+i+".jpg");
   
