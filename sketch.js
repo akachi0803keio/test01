@@ -1,15 +1,14 @@
+var yPos = 0;
+
 function setup() {
-    createCanvas(400, 400);
-    noLoop();
+  frameRate(30);
 }
 
 function draw() {
-    background(255);
-    fill(255);
-    stroke(50);
-    strokeWeight(8);
-    ellipse(200, 200, 200, 200);
-    ellipse(300, 200, 200, 200);
-    ellipse(200, 300, 200, 200);
-    ellipse(300, 300, 200, 200);
+  background(204);
+  yPos = yPos - 1;
+  if (yPos < 0) {
+    yPos = height;
+  }
+  line(0, yPos, width, yPos);
 }
