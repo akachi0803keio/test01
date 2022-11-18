@@ -1,14 +1,24 @@
-var yPos = 0;
+var PImage = nail[];
+var frame = 0;
 
 function setup() {
-  frameRate(30);
+  size(640,480);
+  for(int i =0; i<44; i++)
+    nail[i] =loadImage("11-image_"+i+".jpg");
 }
 
 function draw() {
-  background(204);
-  yPos = yPos - 1;
-  if (yPos < 0) {
-    yPos = height;
+  image(nail[frame], 0, 0);
+  if(mousePressed){
+    frame=frame+1;
+  }else{
+    frame =frame-1;
   }
-  line(0, yPos, width, yPos);
+  
+  if(frame <0){
+    frame =0;
+  }
+    if(frame >43){
+      frame =43;
+  }
 }
