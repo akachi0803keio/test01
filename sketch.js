@@ -1,7 +1,6 @@
-let PImage = nail[];
-let frame = 0;
-
 void setup(){
+  let PImage = nail[];
+　　　　let frame = 0;
   nail = new PImage[44];
   size(640,480);
   print('test page');
