@@ -1,7 +1,27 @@
-function setup() {
-    createCanvas(windowWidth, windowHeight);
+PImage nail[];
+int frame = 0;
+
+void setup(){
+  nail = new PImage[44];
+  size(640,480);
+  
+  for(int i =0; i<44; i++)
+    nail[i] =loadImage("11-image_"+i+".jpg");
+  
 }
- 
-function draw() {
-    ellipse(100, 100, 80, 50);
+
+void draw(){
+  image(nail[frame], 0, 0);
+  if(mousePressed){
+    frame=frame+1;
+  }else{
+    frame =frame-1;
+  }
+  
+  if(frame <0){
+    frame =0;
+  }
+    if(frame >43){
+      frame =43;
+  }
 }
